@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа 5</title>
+    <style>
+        body.light-theme {
+            background-color: white;
+            color: black;
+        }
+
+        body.dark-theme {
+            background-color: black;
+            color: white;
+        }
+
+        .block {
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid #000;
+            background-color: #f0f0f0;
+        }
+
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body class="light-theme">
+    <h1>Лабораторная работа 5</h1>
+
+    <button id="theme-toggle">Сменить тему</button>
+
+    <div class="block">
+        <p id="paragraph">Этот абзац изменит текст и цвет фона при клике на кнопку.</p>
+        <button id="text-toggle">Изменить текст и фон</button>
+    </div>
+
+    <script>
+        // Смена темы
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        themeToggleBtn.addEventListener('click', function() {
+            document.body.classList.toggle('dark-theme');
+            document.body.classList.toggle('light-theme');
+        });
+
+        // Изменение текста и фона абзаца
+        const textToggleBtn = document.getElementById('text-toggle');
+        const paragraph = document.getElementById('paragraph');
+        textToggleBtn.addEventListener('click', function() {
+            paragraph.textContent = 'лалала океокеоке хихихи хахаха';
+            paragraph.classList.toggle('highlight');
+        });
+    </script>
+</body>
+</html>
